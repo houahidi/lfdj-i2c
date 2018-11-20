@@ -1,0 +1,20 @@
+<Context docBase="UniLibraryWeb" path="/UniLibraryWeb" reloadable="true">
+	
+	
+	<!--  Mysql 
+	
+	<Resource name="jdbc/UniLibraryDS" auth="Container"
+		type="javax.sql.DataSource" maxActive="100" maxIdle="30"
+		maxWait="10000" username="admin" password="admin"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/uni_library_db?autoReconnect=true" />
+
+-->
+
+
+	<Resource name="jdbc/UniLibraryDS" auth="Container"
+		type="javax.sql.DataSource" 
+	        driverClassName="org.sqlite.JDBC"
+            url="jdbc:sqlite:/${catalina.home}/dbs/library.db"
+            factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"/>
+</Context>
