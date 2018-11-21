@@ -65,7 +65,7 @@ public class ServletSearchTitles extends ServletInventory {
 			logger.error(e.getMessage());
 			//e.printStackTrace() ;
 		}finally{
-			logger.info("libération de la connexion");
+			logger.info("liberation de la connexion");
 			try {
 				if (connection!= null && ! connection.isClosed())
 					connection.close();
